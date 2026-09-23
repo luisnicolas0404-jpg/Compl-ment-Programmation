@@ -1,0 +1,23 @@
+﻿<Window x:Class="GestionMail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionMail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnEnvoyer" Content="Envoyer" HorizontalAlignment="Left" Margin="169,358,0,0" VerticalAlignment="Top" Width="154" Height="37" Click="btnEnvoyer_Click"/>
+        <Label Content="Adresse expéditeur" HorizontalAlignment="Left" Margin="51,22,0,0" VerticalAlignment="Top" Height="27" Width="117"/>
+        <Label Content="Mot de passe" HorizontalAlignment="Left" Margin="51,66,0,0" VerticalAlignment="Top" Height="26" Width="108"/>
+        <Label Content="Destinataire" HorizontalAlignment="Left" Margin="51,114,0,0" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.409,0.207"/>
+        <Label Content="Objet" HorizontalAlignment="Left" Margin="56,163,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Message" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="txtExpediteur" HorizontalAlignment="Left" Margin="186,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDestinataire" HorizontalAlignment="Left" Margin="186,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtObjet" HorizontalAlignment="Left" Margin="186,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Margin="51,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" Height="90" AcceptsReturn="True"/>
+        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
