@@ -13,11 +13,16 @@
         <Label Content="Destinataire" HorizontalAlignment="Left" Margin="51,114,0,0" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.409,0.207"/>
         <Label Content="Objet" HorizontalAlignment="Left" Margin="56,163,0,0" VerticalAlignment="Top" Width="108"/>
         <Label Content="Message" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Width="85"/>
-        <TextBox x:Name="txtExpediteur" HorizontalAlignment="Left" Margin="186,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtDestinataire" HorizontalAlignment="Left" Margin="186,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtObjet" HorizontalAlignment="Left" Margin="186,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtExpediteur" HorizontalAlignment="Left" Margin="186,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <TextBox x:Name="txtDestinataire" HorizontalAlignment="Left" Margin="186,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <TextBox x:Name="txtObjet" HorizontalAlignment="Left" Margin="186,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
         <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Margin="51,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" Height="90" AcceptsReturn="True"/>
-        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="txtMotDePasse" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" Width="214"/>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="800">
+            <MenuItem Header="Outils">
+                <MenuItem Header="To-Do list" Click="MenuTodoList_Click"/>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace GestionMail
 {
     /// <summary>
@@ -54,6 +55,13 @@ namespace GestionMail
             {
                 MessageBox.Show("Impossible d'envoyer le mail.\n\n" + ex.Message);
             }
+
+        }
+
+        private void MenuTodoList_Click(object sender, RoutedEventArgs e)
+        {
+            TodoWindow fenetreTodo = new TodoWindow();
+            fenetreTodo.Show();
         }
     }
 }
