@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="GestionMail.ChronometreView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+
+        <!-- Cadran analogique -->
+        <Grid Width="250" Height="250">
+            <Ellipse Stroke="Black" StrokeThickness="3" Fill="White"/>
+
+            <!-- Aiguille des heures -->
+            <Rectangle Width="6" Height="75" Fill="Black"
+           HorizontalAlignment="Center" VerticalAlignment="Center"
+           Margin="0,0,0,75">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="{Binding AngleHeures}" CenterX="3" CenterY="75"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <!-- Aiguille des minutes -->
+            <Rectangle Width="4" Height="100" Fill="DarkBlue"
+           HorizontalAlignment="Center" VerticalAlignment="Center"
+           Margin="0,0,0,100">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="{Binding AngleMinutes}" CenterX="2" CenterY="100"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <!-- Aiguille des secondes -->
+            <Rectangle Width="2" Height="115" Fill="Red"
+           HorizontalAlignment="Center" VerticalAlignment="Center"
+           Margin="0,0,0,115">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="{Binding AngleSecondes}" CenterX="1" CenterY="115"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <Ellipse Width="10" Height="10" Fill="Black"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Affichage digital -->
+        <TextBlock Text="{Binding TempsAffiche}" FontSize="28" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,15,0,15"/>
+
+        <!-- Boutons, désactivés automatiquement via CanExecute du RelayCommand -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Démarrer" Width="90" Margin="5" Command="{Binding DemarrerCommand}"/>
+            <Button Content="Arrêter" Width="90" Margin="5" Command="{Binding ArreterCommand}"/>
+            <Button Content="Réinitialiser" Width="90" Margin="5" Command="{Binding ReinitialiserCommand}"/>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
